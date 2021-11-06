@@ -1,0 +1,14 @@
+Time Periods = [Hour, Day, Week, Month, Quarter, Year]
+
+HELP - Return all possible commands
+PRICE {Stock Ticker} - Return stock price
+INFO {Stock Ticker} - Returns basic info about the stock and the link to the stock page
+TOP RISERS - Return the top 5 fastest growing stocks on a given market, the total dollar amount they grew by,
+and the percent growth.
+MARKETS - Return growth information about NASDAQ, S&P500, and other global markets.
+INDUSTRIES - Return general information about industry growth.
+SET PRICE TARGET {Stock Ticker} {Price} {Time Period}- Schedules an alert for the user if a given stock reaches the
+specified price in a given day.
+CLEAR ALL PRICE TARGETS {Time Period} - Clears all price targets for a given timeframe.
+SEE ALL TARGETS - Shows all set price targets in the order they were created.
+DELETE TARGET {Number} - Delete the price target at a given ranking.
