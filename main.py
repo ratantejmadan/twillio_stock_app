@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/sms', methods=['GET', 'POST'])
 def sms():
+    number = request.form['From']
     message = request.values.get('Body', None)
     response = MessagingResponse()
     response.message(define_reply(message))
