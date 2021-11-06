@@ -1,4 +1,4 @@
-Time Periods = [Hour, Day, Week, Month, Quarter, Year]
+Time Periods = [Hour, Day, Week, Month, Quarter, Year, Forever]
 
 HELP - Return all possible commands
 PRICE {Stock Ticker} - Return stock price

@@ -21,19 +21,21 @@ def define_reply(message, number):
     elif text[0] == "INFO":
         host_response = text[1]
     elif message == "TOPRISERS":
-        host_response = "1.2.3.4.5"
+        host_response = "Functionality not yet supported."
     elif message == "MARKETS":
-        host_response = "MARKETS"
+        host_response = "Functionality not yet supported."
     elif message == "INDUSTRIES":
-        host_response = "INDUSTRIES"
-    elif message == "SETPRICETARGET":
-        host_response = "SETPRICETARGET"
+        host_response = "Functionality not yet supported."
+    elif text[0] == "SETPRICETARGET":
+        new_targ = PriceTarget(text[1], text[2], text[3])
+        program_masterbase[number][text[3]].append(new_targ)
+        host_response = "We'll let you know if your stock reaches this price. Cheers!"
     elif message == "CLEARALLPRICETARGETS":
-        host_response = "CLEARALLPRICETARGETS"
+        host_response = "We cleared all of your existing price targets."
+        for target in program_masterbase[]
     elif message == "CLEARALLPRICETARGETS":
-        host_response = "CLEARALLPRICETARGETS"
+        host_response = "Functionality not yet supported."
     elif message == "DELETETARGET":
-        host_response = "DELETETARGET"
-    else:
-        host_response = "Command not recognized. Please try again."
+        host_response = "Functionality not yet supported."
+
     return host_response
