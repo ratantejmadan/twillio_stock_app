@@ -1,14 +1,16 @@
-from main import program_masterbase
+# from main import program_masterbase
 from datetime import date
 import datetime
+from main_storage import program_masterbase
 
 
 class PriceTarget:
-    def __init__(self, ticker, target, time_period):
+    def __init__(self, ticker, target, time_period, number):
         self.target = target
         self.ticker = ticker
         self.time_period = time_period
         self.created = datetime.datetime.now()
+        self.number = number
         if time_period == "Hour":
             self.ending = self.created + datetime.timedelta(hours=1)
         elif time_period == "Day":

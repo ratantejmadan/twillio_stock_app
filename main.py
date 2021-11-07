@@ -1,14 +1,11 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-from basic_scripts import define_reply
 import datetime
 from yahoo_fin import stock_info as yf
 # from user import add_user
+from basic_scripts import define_reply
+from main_storage import program_masterbase, time_types
 app = Flask(__name__)
-
-numbers = []
-program_masterbase = {}
-time_types = ["Hour", "Day", "Week", "Month", "Quarter", "Year"]
 
 
 def target_monitor():
@@ -30,10 +27,9 @@ def sms():
     message = request.values.get('Body', None)
     response = MessagingResponse()
     response.message(define_reply(message, number))
-    target_monitor()
+    # target_monitor()
 
     return str(response)
-
 
 
 if __name__ == '__main__':
