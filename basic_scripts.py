@@ -76,3 +76,5 @@ def currency_parser():
                       str(get_currencies()["Change"][i]) + " " +
                       str(get_currencies()["% Change"][i]))
     return curr_stats
+
+# jj
