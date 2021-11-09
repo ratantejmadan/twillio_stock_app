@@ -71,9 +71,8 @@ def define_reply(message, number):
 def currency_parser():
     curr_stats = ""
     for i in range(0, len(get_currencies()["Name"])):
-        curr_stats = (get_currencies()["Name"][i] + " " + str(get_currencies()["Last Price"][i])
-              + " " + str(get_currencies()["Change"][i]) + " " + str(get_currencies()["% Change"][i]))
-
+        curr_stats = (get_currencies()["Name"][i] + " " +
+                      str(get_currencies()["Last Price"][i]) + " " +
+                      str(get_currencies()["Change"][i]) + " " +
+                      str(get_currencies()["% Change"][i]))
     return curr_stats
-
-currency_parser()
